@@ -1,6 +1,33 @@
-.navbar.transparent.navbar-inverse .navbar-inner {
-   background: rgba(0,0,0,0.4);
+.transparent {
+   background-color: rgba(0,0,0,0.0);
 }
 .row {
     background-color: rgba(255,255,255,0);
+}
+
+.table-borderless tbody tr td, .table-borderless tbody tr th, .table-borderless thead tr th {
+    border: none;
+}
+
+.navbar-inverse {
+    background-color: rgb(0,0,0);
+}
+
+.centermeh1 {
+  margin-top: 40px;
+  text-align: center;
+  color: white;
+  font-size: 50px;
+  font-family: 'Quattrocento Sans', sans-serif;
+}
+.centerme2 {
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  font-family: 'Quattrocento Sans', sans-serif;
+}
+.btn-warning {
+    background-color: rgb(0,0,0);
+    font-family: 'Quattrocento Sans', sans-serif;
+
 }

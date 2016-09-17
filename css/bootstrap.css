@@ -3286,18 +3286,18 @@ fieldset[disabled] .btn-info.focus {
 }
 .btn-warning {
   color: #fff;
-  background-color: #f0ad4e;
-  border-color: #eea236;
+  background-color: black;
+  border-color: #d58512;
 }
 .btn-warning:focus,
 .btn-warning.focus {
   color: #fff;
-  background-color: #ec971f;
-  border-color: #985f0d;
+  background-color: black;
+  border-color: #d58512;
 }
 .btn-warning:hover {
   color: #fff;
-  background-color: #ec971f;
+  background-color: black;
   border-color: #d58512;
 }
 .btn-warning:active,

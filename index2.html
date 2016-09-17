@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Make sure the <html> tag is set to the .full CSS class. Change the background image in the full.css file. -->
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Power Consumption Monitor</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/full.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Acme|Baloo+Bhaina|Bitter|Cormorant+SC|Quattrocento+Sans" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body class="full">
+<div class = "container-fluid">
+<div class = "row">
+<div class = "col-lg-1">
+</div>
+<div class="col-lg-4">
+    <h3 style="color: white; font-family: 'Quattrocento Sans', sans-serif; text-align: left; margin-top: -8px;"><img src="img/lightning.png"> Real Time Power Consumption</h3>
+</div>
+</div>
+<div class="row" style="margin-top: 50px;">
+    <div class ="col-lg-3"></div>
+    <div class="col-lg-6">
+    <div class="table-responsive table-condensed table-borderless" style="font-family: 'Quattrocento Sans', sans-serif; font-size: 17px;">
+    <table class="table" id="apps" style="color: white;">
+    <thead>
+      <tr>
+        <th>Appliance</th>
+        <th>Kilowatts Used</th>
+        <th>Electric Cost</th>
+      </tr>
+    </thead>
+    </table>
+    </div>
+
+    </div>
+    </div>
+    <div class="row" style="margin-top: 50px;">
+    <div class ="col-lg-3"></div>
+    <div class="col-lg-6">
+    <div class="table-responsive table-condensed table-borderless" style="font-family: 'Quattrocento Sans', sans-serif; font-size: 17px;">
+    <table class="table" id="total" style="color: white;">
+    <thead>
+      <tr>
+        <th>Total</th>
+        <th>Kilowatts Used</th>
+        <th>Electric Cost</th>
+      </tr>
+    </thead>
+        <tr>
+            <th></th>
+            <th>0.00</th>
+            <th>0.00</th>
+        </tr>
+    </table>
+</div>
+</div>
+</div>
+
+<div class = "row" style="margin-top: 10px;">
+<div class= "col-lg-2">
+</div>
+<div class = "col-lg-10">
+    <h1 style="color: white; font-size: 30px; font-family: 'Quattrocento Sans', sans-serif;">
+    Appliances:
+    </h1>
+    <div class= "row" style="margin-top: 20px;">
+    <div class="col-lg-3">
+    <img src="img/air-conditioner.png" onclick="add_row('Central AC', appliances)">
+    </div>
+    <div class="col-lg-3">
+    <img src="img/air-conditioner-1.png" onclick="add_row('Window AC (120V)', appliances)">
+    </div>
+    <div class="col-lg-3">
+    <img src="img/heater.png" onclick="add_row('Electric heater (1500W)', appliances)">
+    </div>
+    </div>
+
+    <div class= "row" style="margin-top: 20px; color: white;">
+    <div class="col-lg-3">
+    <p>Central AC</p>
+    </div>
+    <div class="col-lg-3">
+    <p>Window AC (120V)</p>
+    </div>
+    <div class="col-lg-3">
+    <p>Electric heater (1500W)</p>
+    </div>
+    </div>
+
+
+    <div class= "row" style="margin-top: 20px;">
+    <div class="col-lg-3">
+    <img src="img/stove.png" onclick="add_row('Oven Range', appliances)">
+    </div>
+    <div class="col-lg-3">
+    <img src="img/toaster.png" onclick="add_row('Toaster Oven', appliances)">
+    </div>
+    <div class="col-lg-3">
+    <img src="img/microwave-oven.png" onclick="add_row('Microwave Oven', appliances)">
+    </div>
+    </div>
+
+    <div class= "row" style="margin-top: 20px; color: white;">
+    <div class="col-lg-3">
+    <p>Oven Range</p>
+    </div>
+    <div class="col-lg-3">
+    <p>Toaster Oven</p>
+    </div>
+    <div class="col-lg-3">
+    <p>Microwave Oven</p>
+    </div>
+    </div>
+
+    <div class= "row" style="margin-top: 20px;">
+    <div class="col-lg-3">
+    <img src="img/light-bulb.png" onclick="add_row('Incandescent bulb (75W)', appliances)">
+    </div>
+    <div class="col-lg-3">
+    <img src="img/light-bulb-1.png" onclick="add_row('Compact Fluorescent (20W)', appliances)">
+    </div>
+    <div class="col-lg-3">
+    <img src="img/smart-tv.png" onclick="add_row('LCD TV', appliances)">
+    </div>
+    </div>
+
+    <div class= "row" style="margin-top: 20px; color: white;">
+    <div class="col-lg-3">
+    <p>Incandescent bulb (75W)</p>
+    </div>
+    <div class="col-lg-3">
+    <p>Compact Fluorescent (20W)</p>
+    </div>
+    <div class="col-lg-3">
+    <p>LCD TV</p>
+    </div>
+    </div>
+
+
+</div>
+</div>
+</div>
+</body>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/controllers.js"></script>
+</html>
