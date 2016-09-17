@@ -5,16 +5,15 @@ var appliances = {
     'Microwave Oven': {'kilowatts': 1.4, 'cost': 0.12},
     'Toaster Oven': {'kilowatts': 0.75, 'cost': 0.08},
     'LCD TV': {'kilowatts': 0.016, 'cost': 0.01},
-    'Incandescent bulb (75W)': {'kilowatts': 0.08, 'cost': 0.01},
-    'Compact Fluorescent (20W)': {'kilowatts': 0.02, 'cost': 0.003},
+    'Incandescent bulb (75W)': {'kilowatts': 0.08, 'cost': 0.02},
+    'Compact Fluorescent (20W)': {'kilowatts': 0.02, 'cost': 0.01},
     'Electric heater (1500W)': {'kilowatts': 1.5, 'cost': 0.17}
 }
-/*
-function turn_green(id) {
-    var element = document.getElementById(id);
-    element.style.background-color='red';
+
+function turn_green(element) {
+    element.style.backgroundColor='green';
 }
-*/
+
 
 function add_row(appliance_name, appliances) {
     var table = document.getElementById("apps");
