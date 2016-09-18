@@ -12,8 +12,8 @@ var appliances = {
 
 function turn_green(element) {
     element.style.backgroundColor='green';
+    element.style.color='white';
 }
-
 
 function add_row(appliance_name, appliances) {
     var table = document.getElementById("apps");
@@ -37,6 +37,7 @@ function update_row(appliance_name, appliances) {
     new_kilo.innerHTML = (parseFloat(new_kilo.innerHTML) + appliances[appliance_name]['kilowatts']).toFixed(2);
     new_cost.innerHTML = (parseFloat(new_cost.innerHTML) + appliances[appliance_name]['cost']).toFixed(2);
 }
+
 function update_total() {
     total_table = document.getElementById('total');
     total_row = total_table.getElementsByTagName('tr')[1];
